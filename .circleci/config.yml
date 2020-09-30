@@ -9,7 +9,7 @@ jobs:
     build:
         executor: python_docker
         steps:
-            checkout:
+            - checkout:
                 path: ~/project
             - run:
                 command:
