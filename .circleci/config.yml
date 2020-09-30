@@ -28,6 +28,8 @@ jobs:
                     mkdir -p reports
                     echo '<p><b>this is a test report</b></p>' > reports/fake_test_report.html
                 name: Generate Artifacts
+            - store_artifacts:
+                path: reports
             - run:
                 command:
                     echo 'Hello Ankur'
