@@ -19,6 +19,11 @@ jobs:
                     ./ci/setup.sh
                 name: Setup
             - run:
+                command: |
+                    echo 'Running tests'
+                    python -m unittest discover -s tests/ -p "test*.py" -v
+                name: Run Tests
+            - run:
                 command:
                     echo 'Hello Ankur'
 
