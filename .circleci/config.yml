@@ -3,7 +3,7 @@ version: 2.1
 executors:
     python_docker:
         docker:
-            - image: circleci/python:3.7-node-browser-legacy
+            - image: circleci/python:3.7-node-browsers-legacy
 
 jobs:
     build:
