@@ -24,8 +24,14 @@ jobs:
                     python -m unittest discover -s tests/ -p "test*.py" -v
                 name: Run Tests
             - run:
+                command: |
+                    mkdir -p reports
+                    echo '<p><b>this is a test report</b></p>' > reports/fake_test_report.html
+                name: Generate Artifacts
+            - run:
                 command:
                     echo 'Hello Ankur'
+                name: Hello
 
 workflows:
   build_test_deploy:
